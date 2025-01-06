@@ -1,10 +1,11 @@
 import javax.swing.*;
 import java.awt.*;
 import javax.swing.border.Border;
-import javax.swing.border.CompoundBorder;
 import javax.swing.JFrame;
 
 public class TttGUIDisplay {
+	JFrame frame = new JFrame();
+
 	JButton btn1 = new JButton(" ");
 	JButton btn2 = new JButton(" ");
 	JButton btn3 = new JButton(" ");
@@ -23,7 +24,7 @@ public class TttGUIDisplay {
 	JPanel panel3 = new JPanel(new FlowLayout(FlowLayout.CENTER, 0, 0));
 
 	public void displayGUI() {
-		JFrame frame = new JFrame();
+
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setResizable(false);
 

@@ -87,12 +87,12 @@ public class TttGUIDriver {
 			if (rowMap.containsKey(" X ") && rowMap.get(" X ") == 3) {
 				tttGUIDisplay.message.setText("Player 1 wins.");
 				gameOver = true;
-				return;
+
 			}
 			if (rowMap.containsKey(" O ") && rowMap.get(" O ") == 3) {
 				tttGUIDisplay.message.setText("Player 2 wins.");
 				gameOver = true;
-				return;
+
 			}
 		}
 		for (int col = 0; col < list[0].length; col++) {
@@ -104,38 +104,37 @@ public class TttGUIDriver {
 			if (colMap.containsKey(" X ") && colMap.get(" X ") == 3) {
 				tttGUIDisplay.message.setText("Player 1 wins.");
 				gameOver = true;
-				return;
+
 			}
 			if (colMap.containsKey(" O ") && colMap.get(" O ") == 3) {
 				tttGUIDisplay.message.setText("Player 2 wins.");
 				gameOver = true;
-				return;
+
 			}
 		}
 		if (list[0][0].getText().equals(" X ") && list[1][1].getText().equals(" X ")
 				&& list[2][2].getText().equals(" X ")) {
 			tttGUIDisplay.message.setText("Player 1 wins.");
 			gameOver = true;
-			return;
+
 		}
 		if (list[0][2].getText().equals(" X ") && list[1][1].getText().equals(" X ")
 				&& list[2][0].getText().equals(" X ")) {
 			tttGUIDisplay.message.setText("Player 1 wins.");
 			gameOver = true;
-			return;
+
 		}
 		if (list[0][0].getText().equals(" O ") && list[1][1].getText().equals(" O ")
 				&& list[2][2].getText().equals(" O ")) {
 			tttGUIDisplay.message.setText("Player 2 wins.");
 			gameOver = true;
-			return;
 
 		}
 		if (list[0][2].getText().equals(" O ") && list[1][1].getText().equals(" O ")
 				&& list[2][0].getText().equals(" O ")) {
 			tttGUIDisplay.message.setText("Player 2 wins.");
 			gameOver = true;
-			return;
+
 		}
 
 		boolean draw = true;
@@ -159,6 +158,7 @@ public class TttGUIDriver {
 
 		if (gameOver) {
 			tttGUIDisplay.panel0.add(tttGUIDisplay.restartBtn);
+			tttGUIDisplay.frame.repaint();
 		}
 
 	}
